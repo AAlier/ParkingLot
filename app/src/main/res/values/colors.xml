@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="accept">#4ce600</color>
+    <color name="gold">#FFDF00</color>
+    <color name="reject">#ff3333</color>
+    <color name="white">#FFF</color>
+    <color name="grey">#e5e5e5</color>
+
+</resources>

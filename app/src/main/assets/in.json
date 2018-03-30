@@ -1,0 +1,99 @@
+[
+	{
+		"coordinates": [
+			{
+				"lat": 42.823595,
+				"lng": 74.617427
+			},
+			{
+				"lat": 42.823048,
+				"lng": 74.616652
+			},
+			{
+				"lat": 42.823139,
+				"lng": 74.616457
+			},
+			{
+				"lat": 42.822995,
+				"lng": 74.616263
+			},
+			{
+				"lat": 42.823465,
+				"lng": 74.615657
+			},
+			{
+				"lat": 42.823607,
+				"lng": 74.615915
+			},
+			{
+				"lat": 42.823215,
+				"lng": 74.616408
+			},
+			{
+				"lat": 42.823748,
+				"lng": 74.617181
+			}
+		],
+		"busy_parking_places": 80,
+		"parking_places": 90,
+		"image": "https://urbanmatter.com/chicago/wp-content/uploads/2015/07/Hotel-Parking.jpg",
+		"description": "Парковка возле гипер - маркета Глобус",
+		"title": "Глобус",
+		"cost_per_min": 8.5,
+		"id": 1
+	},
+	{
+		"coordinates": [
+			{
+				"lat": 42.875367,
+				"lng": 74.615075
+			},
+			{
+				"lat": 42.874352,
+				"lng": 74.615029
+			},
+			{
+				"lat": 42.874348,
+				"lng": 74.615297
+			},
+			{
+				"lat": 42.87535,
+				"lng": 74.615328
+			}
+		],
+		"busy_parking_places": 45,
+		"parking_places": 50,
+		"image": "https://urbanmatter.com/chicago/wp-content/uploads/2015/07/Hotel-Parking.jpg",
+		"description": "Парковка возле гипер - маркета Алма",
+		"title": "Алма",
+		"cost_per_min": 6,
+		"id": 2
+	},
+	{
+		"coordinates": [
+			{
+				"lat": 42.855047,
+				"lng": 74.584253
+			},
+			{
+				"lat": 42.856503,
+				"lng": 74.584259
+			},
+			{
+				"lat": 42.855896,
+				"lng": 74.586513
+			},
+			{
+				"lat": 4285.4995,
+				"lng": 74.586513
+			}
+		],
+		"busy_parking_places": 150,
+		"parking_places": 150,
+		"image": "https://urbanmatter.com/chicago/wp-content/uploads/2015/07/Hotel-Parking.jpg",
+		"description": "Парковка возле гипер - маркета Asia-Mall",
+		"title": "Asia - Mall",
+		"cost_per_min": 9,
+		"id": 3
+	}
+]

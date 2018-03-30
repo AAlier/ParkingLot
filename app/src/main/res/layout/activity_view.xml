@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/horizontal_margin">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:minHeight="250dp" />
+
+        <TextView
+            android:id="@+id/titleView"
+            style="@style/CustomTextLayout"
+            android:layout_marginTop="@dimen/horizontal_margin"
+            android:text="Title" />
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/CustomTextLayout"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="Description" />
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:id="@+id/cost"
+            style="@style/CustomTextLayout"
+            android:layout_marginTop="@dimen/margin_8"
+            android:drawableLeft="@drawable/price"
+            android:drawableStart="@drawable/price"
+            android:text="100" />
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:id="@+id/free"
+            style="@style/CustomTextLayout"
+            android:layout_marginTop="@dimen/margin_8"
+            android:drawableLeft="@drawable/available"
+            android:drawableStart="@drawable/available"
+            android:text="100" />
+
+        <include layout="@layout/divider" />
+
+        <TextView
+            android:id="@+id/busy"
+            style="@style/CustomTextLayout"
+            android:layout_marginTop="@dimen/margin_8"
+            android:drawableLeft="@drawable/booked"
+            android:drawableStart="@drawable/booked"
+            android:text="100" />
+
+        <include layout="@layout/divider" />
+    </LinearLayout>
+
+</ScrollView>

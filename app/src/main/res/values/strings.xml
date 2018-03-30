@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Parking</string>
+    <string name="loading">Загрузка</string>
+
+    <string name="request_setting_permissions">Вы отключили некоторые разрешения, включите их в настройках</string>
+    <string name="sort">sort</string>
+    <string name="map">Показать на карте</string>
+    <string name="sortNearest">Ближайщие парковок</string>
+    <string name="sortAvailable">Ближайщие свободные парковки</string>
+    <string name="error_give_perm">Включите разрешения местоположения для того чтобы использовать этот функционал</string>
+    <string name="fict_location">Fake location</string>
+    <string name="date_s">Date: %s Time: %s</string>
+    <string name="history">История посещений</string>
+    <string name="thank">Спасибо что были с нами!</string>
+    <string name="delete">Удалить</string>
+    <string name="verify_message">Вы уверены что хотите удалить</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="error_load">Произошла ошибка</string>
+    <string name="error">Ошибка</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_sort_nearest"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/sortNearest"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/item_sort_available"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/sortAvailable"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/item_history"
+        android:title="@string/history"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/item_fict_location"
+        app:actionLayout="@layout/switch_view"
+        android:title="@string/fict_location"
+        app:showAsAction="ifRoom" />
+</menu>
