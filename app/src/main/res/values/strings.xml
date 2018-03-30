@@ -18,5 +18,8 @@
     <string name="no">Нет</string>
     <string name="error_load">Произошла ошибка</string>
     <string name="error">Ошибка</string>
+    <string name="cost_min">Стоимость за минуту: %s</string>
+    <string name="booked">Занято: %s</string>
+    <string name="available">Свободно: %s</string>
 
 </resources>

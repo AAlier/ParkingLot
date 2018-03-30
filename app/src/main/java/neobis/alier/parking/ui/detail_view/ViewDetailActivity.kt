@@ -20,9 +20,9 @@ class ViewDetailActivity : BaseActivity() {
         title = model.title
         titleView.text = model.title
         description.text = model.description
-        cost.text = model.cost_per_min.toString()
-        busy.text = model.busy_parking_places.toString()
-        free.text = model.available().toString()
+        cost.text = getString(R.string.cost_min, model.cost_per_min.toString())
+        busy.text = getString(R.string.booked, model.busy_parking_places.toString())
+        free.text = getString(R.string.available,model.available().toString())
         Glide.with(this).load(model.getImgUrl()).into(imageView)
     }
 }

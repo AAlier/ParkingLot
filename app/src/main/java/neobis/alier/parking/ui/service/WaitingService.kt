@@ -71,7 +71,6 @@ class WaitingService : Service() {
                                 Log.e(TAG, "3 MINUTES NOT PASSED YET")
                         }
                     }
-                    Log.e("______________", "User is in ${data.title}")
                 } else if(Shares.getPlaceID(applicationContext) == data.id) {
                     val step = Shares.getStep(applicationContext)
                     when (step) {

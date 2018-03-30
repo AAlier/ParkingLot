@@ -61,7 +61,7 @@ class HistoryActivity : BaseActivity(), HistoryContract.View, DataAdapter.Listen
     }
 
     private fun verifyDelete(id: String?) {
-        val builder = AlertDialog.Builder(baseContext)
+        val builder = AlertDialog.Builder(this)
         builder.setMessage(getString(R.string.verify_message))
                 .setPositiveButton(getString(R.string.yes), { _: DialogInterface, _: Int ->
                     presenter.removeFromDB(id)

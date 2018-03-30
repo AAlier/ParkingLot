@@ -8,7 +8,8 @@ import neobis.alier.parking.utils.Const
 class HistoryPresenter(val view: HistoryContract.View?, val realm: Realm, val context: Context) : HistoryContract.Presenter {
 
     override fun loadHistory() {
-        // val list = FileUtils.readFile("history.json", context)
+        /*val list = FileUtils.readFile("history.json", context)
+        view?.onSuccess(list)*/
         val result = realm.where(Data::class.java).equalTo("isHistory", true).findAll()
         if (result != null && isViewAttached()) view!!.onSuccess(realm.copyFromRealm(result))
         else if (isViewAttached()) view!!.onError(Const.ERROR_LOAD)
@@ -17,10 +18,11 @@ class HistoryPresenter(val view: HistoryContract.View?, val realm: Realm, val co
     private fun isViewAttached(): Boolean = view != null
 
     override fun removeFromDB(id: String?) {
-        if(id != null){
+        if (id != null) {
             realm.executeTransaction({ _ ->
                 realm.where(Data::class.java).equalTo("id", id).findAll().deleteAllFromRealm()
             })
         }
+        loadHistory()
     }
 }

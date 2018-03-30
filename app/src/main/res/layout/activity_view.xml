@@ -19,17 +19,21 @@
 
         <TextView
             android:id="@+id/titleView"
+            android:drawableLeft="@drawable/title"
             style="@style/CustomTextLayout"
             android:layout_marginTop="@dimen/horizontal_margin"
-            android:text="Title" />
+            android:text="Title"
+            android:drawableStart="@drawable/title" />
 
         <include layout="@layout/divider" />
 
         <TextView
             android:id="@+id/description"
+            android:drawableLeft="@drawable/description"
             style="@style/CustomTextLayout"
             android:layout_marginTop="@dimen/margin_8"
-            android:text="Description" />
+            android:text="Description"
+            android:drawableStart="@drawable/description" />
 
         <include layout="@layout/divider" />
 

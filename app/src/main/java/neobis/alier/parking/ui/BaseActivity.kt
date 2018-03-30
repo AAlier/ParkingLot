@@ -25,7 +25,7 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     protected fun showWarningMessage(message: String) {
-        val builder = AlertDialog.Builder(baseContext)
+        val builder = AlertDialog.Builder(this)
         builder.setTitle(getString(R.string.error)).setMessage(message)
                 .setPositiveButton(android.R.string.ok, { v: DialogInterface, _: Int ->
                     v.dismiss()

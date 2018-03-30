@@ -81,6 +81,6 @@ object CommonUtils {
         different %= minutesInMilli
 
         val elapsedSeconds = different / secondsInMilli
-        return "H:$elapsedHours, M:$elapsedMinutes, S:$elapsedSeconds"
+        return "hour:$elapsedHours, minute:$elapsedMinutes, second:$elapsedSeconds"
     }
 }
