@@ -85,7 +85,7 @@ class LocationUpdateService : Service(), GoogleApiClient.ConnectionCallbacks,
     private fun initLocationRequest() {
         mLocationRequest = LocationRequest()
         mLocationRequest!!.interval = 60000
-        mLocationRequest!!.fastestInterval = 5000
+        mLocationRequest!!.fastestInterval = 20000
         mLocationRequest!!.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
     }
 
