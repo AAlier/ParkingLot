@@ -2,7 +2,6 @@ package neobis.alier.parking.utils
 
 import android.app.Activity
 import android.location.Location
-import android.util.Log
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.maps.model.LatLng
@@ -65,7 +64,7 @@ object CommonUtils {
         return x > pX
     }
 
-    fun printTime(difference: Long) : String {
+    fun printTime(difference: Long): String {
         val secondsInMilli: Long = 1000
         val minutesInMilli = secondsInMilli * 60
         val hoursInMilli = minutesInMilli * 60

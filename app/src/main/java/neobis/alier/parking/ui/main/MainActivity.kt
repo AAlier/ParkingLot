@@ -26,7 +26,7 @@ class MainActivity : BaseActivity(), MainContract.View, DataAdapter.Listener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         init()
     }
 
@@ -34,7 +34,7 @@ class MainActivity : BaseActivity(), MainContract.View, DataAdapter.Listener {
         initRecyclerView()
         initPresenter()
         startReceiver()
-        refreshView.setOnRefreshListener {
+        refreshView?.setOnRefreshListener {
             presenter.request()
         }
     }
@@ -49,6 +49,7 @@ class MainActivity : BaseActivity(), MainContract.View, DataAdapter.Listener {
         presenter.loadData()
     }
 
+    @Synchronized
     private fun initRecyclerView() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = DataAdapter(ArrayList(), false, this)
@@ -59,10 +60,12 @@ class MainActivity : BaseActivity(), MainContract.View, DataAdapter.Listener {
         adapter.setList(list)
     }
 
-    override fun onClick(model: Data) {
-        val intent = Intent(this, MapViewActivity::class.java)
-        intent.putExtra("data", model)
-        startActivity(intent)
+    override fun onClick(model: Data?) {
+        if(model != null) {
+            val intent = Intent(this, MapViewActivity::class.java)
+            intent.putExtra("data", model)
+            startActivity(intent)
+        }
     }
 
     override fun onLongClick(id: String?) {}
@@ -107,11 +110,11 @@ class MainActivity : BaseActivity(), MainContract.View, DataAdapter.Listener {
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         val alertMenuItem = menu.findItem(R.id.item_fict_location)
-        val rootView = alertMenuItem.actionView as LinearLayout
+        val rootView = alertMenuItem.actionView as? LinearLayout?
 
-        val isFakeSwitch = rootView.findViewById<Switch>(R.id.isFake)
-        isFakeSwitch.isChecked = Shares.isFake(this)
-        isFakeSwitch.setOnCheckedChangeListener { _, isChecked ->
+        val isFakeSwitch = rootView?.findViewById<Switch>(R.id.isFake)
+        isFakeSwitch?.isChecked = Shares.isFake(this)
+        isFakeSwitch?.setOnCheckedChangeListener { _, isChecked ->
             Shares.setIsFake(applicationContext, isChecked)
         }
         return super.onPrepareOptionsMenu(menu)

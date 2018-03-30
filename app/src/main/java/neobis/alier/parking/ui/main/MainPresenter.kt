@@ -1,13 +1,11 @@
 package neobis.alier.parking.ui.main
 
 import android.content.Context
-import com.google.android.gms.maps.model.LatLng
 import io.realm.Realm
 import io.realm.RealmList
 import neobis.alier.parking.ForumService
 import neobis.alier.parking.models.Data
 import neobis.alier.parking.utils.Const.ERROR_LOAD
-import neobis.alier.parking.utils.FileUtils
 import neobis.alier.parking.utils.Shares
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,7 +17,7 @@ class MainPresenter(val view: MainContract.View?,
                     val context: Context,
                     val realm: Realm) : MainContract.Presenter {
 
-    override fun request(){
+    override fun request() {
         if (isViewAttached()) view!!.showProgress()
         service.data.enqueue(object : Callback<RealmList<Data>> {
             override fun onResponse(call: Call<RealmList<Data>>?, response: Response<RealmList<Data>>?) {
@@ -45,7 +43,7 @@ class MainPresenter(val view: MainContract.View?,
 
     override fun loadData() {
         val list = getFromDB()
-        if(list != null && list.size > 0)
+        if (list != null && list.size > 0)
             view?.onSuccess(list)
         else
             request()
@@ -78,7 +76,7 @@ class MainPresenter(val view: MainContract.View?,
         return if (result != null) realm.copyFromRealm(result) else null
     }
 
-    private fun save(list: RealmList<Data>){
+    private fun save(list: RealmList<Data>) {
         realm.executeTransaction({ _ ->
             realm.where(Data::class.java).findAll().deleteAllFromRealm()
         })

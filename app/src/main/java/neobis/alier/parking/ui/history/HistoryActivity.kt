@@ -48,14 +48,14 @@ class HistoryActivity : BaseActivity(), HistoryContract.View, DataAdapter.Listen
         showWarningMessage(message)
     }
 
-    override fun onClick(model: Data) {
-        openViewDetail(model)
+    override fun onClick(model: Data?) {
+        if (model != null) openViewDetail(model)
     }
 
     override fun onLongClick(id: String?) {
         val args = arrayOf<String>(getString(R.string.delete))
         AlertDialog.Builder(this)
-                .setItems(args, { dialog, index ->
+                .setItems(args, { _, index ->
                     if (index == 0) verifyDelete(id)
                 }).show()
     }
@@ -66,7 +66,7 @@ class HistoryActivity : BaseActivity(), HistoryContract.View, DataAdapter.Listen
                 .setPositiveButton(getString(R.string.yes), { _: DialogInterface, _: Int ->
                     presenter.removeFromDB(id)
                 }).setNegativeButton(getString(R.string.no), { dialogView: DialogInterface, _: Int ->
-                    dialogView.dismiss()
+            dialogView.dismiss()
         }).show()
     }
 }

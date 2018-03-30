@@ -1,6 +1,7 @@
 package neobis.alier.parking.ui.history
 
 import android.content.Context
+import android.text.TextUtils
 import io.realm.Realm
 import neobis.alier.parking.models.Data
 import neobis.alier.parking.utils.Const
@@ -18,7 +19,7 @@ class HistoryPresenter(val view: HistoryContract.View?, val realm: Realm, val co
     private fun isViewAttached(): Boolean = view != null
 
     override fun removeFromDB(id: String?) {
-        if (id != null) {
+        if (id != null && !TextUtils.isEmpty(id)) {
             realm.executeTransaction({ _ ->
                 realm.where(Data::class.java).equalTo("id", id).findAll().deleteAllFromRealm()
             })

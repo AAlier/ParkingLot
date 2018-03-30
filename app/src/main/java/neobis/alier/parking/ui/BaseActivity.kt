@@ -6,7 +6,6 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.toolbar.*
 import neobis.alier.parking.R
 import neobis.alier.parking.StartApplication
 
@@ -18,8 +17,6 @@ open class BaseActivity : AppCompatActivity() {
         super.setContentView(layoutResID)
         app = application as StartApplication
 
-        if (toolbar != null)
-            setSupportActionBar(toolbar)
         if (supportActionBar != null)
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }

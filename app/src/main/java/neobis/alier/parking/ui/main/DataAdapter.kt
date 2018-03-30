@@ -71,7 +71,7 @@ class DataAdapter(private var list: MutableList<Data>,
     fun getList(): MutableList<Data> = list
 
     interface Listener {
-        fun onClick(model: Data)
+        fun onClick(model: Data?)
         fun onLongClick(id: String?)
     }
 }
